@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { Octokit } from '@octokit/core';
-// import ReactSearchBox from "react-search-box";
+
+// @ts-ignore
+// const YOUR_TOKEN = `${import.meta.env.GITHUB_TOKEN}`;
+
+const YOUR_TOKEN = process.env.GITHUB_TOKEN;
 
 const octokit = new Octokit({
-    auth: 'YOUR_TOKEN',
+    auth: YOUR_TOKEN,
 });
 
 interface GitHubUser {
@@ -30,8 +34,9 @@ interface GitHubUser {
         alert("Please enter a username!");
         return;
       }
-  
+    
       try {
+        // @ts-ignore
         const response: Octokit.Response<GitHubUser> = await octokit.request("GET /users/{username}", {
           username: username,
           headers: {
