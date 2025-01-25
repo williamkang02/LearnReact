@@ -3,7 +3,7 @@ import { Octokit } from '@octokit/core';
 // import ReactSearchBox from "react-search-box";
 
 const octokit = new Octokit({
-    auth: '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',
+    auth: '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',
 });
 
 interface GitHubUser {
@@ -50,39 +50,7 @@ interface GitHubUser {
         setUserData(null); // Clear previous user data on error
       }
     };
-
-// const GithubForms = () => {
-//     const [username, setUsername] = useState(""); // State for username input
-//     const [userData, setUserData] = useState(null); // State for Github user data
-//     const [error, setError] = useState(null); // State for error handling
-
     
-
-//     const handleClick = async (event) => {
-        
-//         event.preventDefault(); // Prevent form submission default behaviour
-
-//         if (!username) {
-//             alert("Please enter a username!");
-//             return ;
-//         }
-
-//         try{
-//             const response = await octokit.request('GET /users/{username}', {
-//                 username: username,
-//                 headers: {
-//                 'X-GitHub-Api-Version': '2022-11-28'
-//                 }
-//             });
-//             setUserData(response.data); // Store fetched Github user data
-//             setError(null); // clear any previous errors
-//         } catch (err: any) {
-//             setError(err.message);
-//             setUserData(null); // clear previous user data on error
-//         }
-//     }
-    
-
   return (
     <>
         <div>
