@@ -5,8 +5,6 @@ import GithubForms from "@/components/forms/githubForms";
 
 export default function githubFormPage() {
 
-    
-
     return (
     <>
         <Head>
