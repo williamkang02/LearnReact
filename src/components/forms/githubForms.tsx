@@ -3,7 +3,7 @@ import { Octokit } from '@octokit/core';
 // import ReactSearchBox from "react-search-box";
 
 const octokit = new Octokit({
-    auth: 'YOUR-TOKEN',
+    auth: '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',
 });
 
 interface GitHubUser {
